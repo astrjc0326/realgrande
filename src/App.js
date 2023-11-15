@@ -31,7 +31,7 @@ import EnquiryList from './components/EnquiryList';
       console.log('in useEffect');
       const fetchData = async ()=>{
         // let resp =  await axios.get('http://localhost:3002/');
-        let resp =  await axios.get('http://3.92.179.31:3002/');
+        let resp =  await axios.get(process.env.REACT_APP_BACKEND_URL);
 
         let data = await resp.data;
         setHousesData(data);
